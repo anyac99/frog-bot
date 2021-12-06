@@ -18,7 +18,7 @@ async def on_ready():
 @bot.command(name='aurora',
              help='Gives predictions for visible auroras in the PNW')
 async def aurora_forecast_27days(ctx):
-    vis_days = kpi_27_day.aurora_days(2)
+    vis_days = kpi_27_day.aurora_days(6)
     if len(vis_days) > 0:
         vis_days = ', '.join(vis_days)
         response = ('Aurora may be visible in your location on: ' + vis_days)
